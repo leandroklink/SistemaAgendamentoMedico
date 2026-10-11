@@ -11,6 +11,13 @@ export abstract class NotificacaoFactory {
     const notificacao = this.criarNotificacao();
     notificacao.enviar(destinatario, mensagem);
   }
+
+  // Despacho de documentos pós-consulta (receita digital, comprovante...).
+  // Quem chama não sabe se vai por e-mail, SMS ou WhatsApp.
+  enviarDocumento(destinatario: string, titulo: string, conteudo: string): void {
+    const notificacao = this.criarNotificacao();
+    notificacao.enviar(destinatario, `${titulo}\n${conteudo}`);
+  }
 }
 
 export class EmailNotificacaoFactory extends NotificacaoFactory {
