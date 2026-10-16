@@ -1,4 +1,4 @@
-import { Agendamento } from "../models/agendamento";
+import { Agendamento } from "../models/Agendamento";
 
 
 
