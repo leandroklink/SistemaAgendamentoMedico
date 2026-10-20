@@ -16,6 +16,9 @@ import { Medico } from "../models/Medico";
  *
  * O clone é profundo em turnos e slots (que são mutáveis) e compartilha o
  * Medico por referência (ele é só identificação e é imutável).
+ * 
+ * 
+ * 
  */
 export class SemanaModelo implements Clonavel<SemanaModelo> {
   constructor(

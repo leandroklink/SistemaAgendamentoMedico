@@ -1,6 +1,8 @@
+//  O Padrão aplicado aqui é o Singleton, que garante que apenas uma instância do GerenciadorDeAgendamentos
+//seja criada e utilizada em toda a aplicação. Isso é útil para gerenciar agendamentos de forma centralizada, 
+//evitando inconsistências e duplicações de dados.
+
 import { Agendamento } from "../models/Agendamento";
-
-
 
 export class GerenciadorDeAgendamentos {
   private static instancia: GerenciadorDeAgendamentos;
